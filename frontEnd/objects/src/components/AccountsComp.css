@@ -1,0 +1,105 @@
+.acctComp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    color: white;  
+}
+
+
+.Button {
+    padding: 5px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+
+.Button_shadow {
+   margin: 6px;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.Button_size {
+  padding: 10px;
+  margin: 15px;
+
+}
+
+.input {
+  padding: 2px;
+  margin: 5px;
+  border-radius: 8px;
+
+}
+
+.cardContainer {
+    /*display: flex;*/
+    background-color: grey;
+    border: solid rgb(238, 240, 163) 2px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer1 {
+    display: flex;
+    background-color: grey;
+    margin: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acctInfoContainer {
+    /*display: flex;*/
+    background-color: grey;
+    border: solid rgb(238, 240, 163) 2px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.typeSelect select {
+  appearance: none;
+  border: solid #282c34 2px;
+  border-radius: 5px;
+  width: 160px;
+  height: 20px;
+  /*font-size: 10pt;
+  font-weight: bolder;*/
+  padding-left: 20px;
+  margin: 5px;  
+}
+
+
+
+.CreateAcct {
+	font-size: 20pt;
+  	font-weight: bolder;
+  	background-color: grey;
+  	border: solid rgb(238, 240, 163) 2px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+#button:hover {
+  transform: scale(0.98);
+}
+
+p {
+    display: block;
+    /*font-size: large;*/
+    padding: 2px;
+    margin: 2px
+}
+
+

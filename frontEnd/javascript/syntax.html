@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Syntax</title>
+</head>
+<body>
+
+
+<p id="demo function"> </p>
+
+<button onclick="myFunction1()">add kiwi to the end of the array</button>
+<br>
+<p>This button uses push() method will return the new fruit array length.</p>
+
+<button onclick="myFunction2()">add pineapple to the front of the array</button>
+
+<p>This button uses unshift() method will return the new fruit array length.</p>
+
+<p style="color:green"><b>Now the fruit array is:</b></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<button onclick="fruits.forEach(myfunction3)"> for each loop demo</button>
+<p id="demo7"></p>
+<hr>
+
+<!-- define attributles/variables -->
+<script type="text/javascript">
+	const a=20;//number
+	const b="aaaaa" ;//string
+	const c={firstname: "other test", lastName: "test"} ;//object
+	const d=["good","better","best"];//array
+	// const true;//boolen
+	var car;//undefined
+	console.log(a,b,c,d,car);
+
+//if else example
+	let greeting;
+	let time = new Date().getHours();
+	if (time < 10) {
+	  greeting = "Good morning";
+	} else if (time < 20) {
+	  greeting = "Good day";
+	} else {
+	  greeting = "Good evening";
+	}
+	console.log(greeting)
+
+//functions, parameters, returns
+
+
+ 	function myFunction(x,y){
+ 		return x*y;
+ 	}
+
+	document.getElementById("demo function").textContent= "demo function is: x*y=" + myFunction(3,4);
+
+//arrays
+//add to the end
+let fruits=["apple","orange","mandarin"];
+
+document.getElementById("demo1").textContent=fruits;
+
+function myFunction1(){
+	document.getElementById("demo2").textContent=fruits.push("kiwi");
+	document.getElementById("demo1").textContent=fruits;
+};
+
+function myFunction2(){
+	document.getElementById("demo2").textContent=fruits.unshift("pinapple");
+	document.getElementById("demo1").textContent=fruits;
+}
+
+
+//loops
+
+//for
+let text = "";
+for (i=0; i<fruits.length; i++) {
+	// console.log("o");
+	text += fruits[i]  + "\r\n";
+	// console.log(fruits[i]);
+};
+document.getElementById("demo4").textContent = "for loop result is " + text + "\r";
+	// console.log(text);
+
+//for/in loop	
+let text2 = "";
+for (x in fruits) {
+	text2 += fruits[x] + "\n";
+	// console.log("p");
+};
+
+document.getElementById("demo5").textContent = "for/in loop result is " + "["+ text2 + "]" + "\n";
+// console.log(text2)
+
+//while
+var i=0;
+let text3 ="";
+while (i < fruits.length) {
+
+	text3 += fruits[i] + "\n";
+	// console.log(text3);
+	i++;
+};
+
+document.getElementById("demo6").textContent = "while loop result is " + "["+ text3 + "]" + "\n";
+
+
+//for Each (with array and function)
+
+let text4 = "";
+
+function myfunction3(item,index) {
+	// console.log(fruits);
+	text4 = fruits[index] + "\n";
+	console.log(text4);
+	document.getElementById("demo7").innerHTML = "for each loop result is " + text4 +"\n";
+};
+
+
+//Objects/Dictionaries
+//declare object
+let province = {
+	ab: "Alberta",
+	bc: "British Columbia",
+	sk: "Saskatchewan",
+}
+console.log(province);
+
+//lookup key to retrieve value
+province.on = "Ontario"; //adding new property
+console.log(province);
+
+province.ab = "Monitoba"; //change the property
+console.log(province);
+
+// Province["ns"] = "Nova Scotia";
+// console.log(province);
+
+console.log(Object.values(province)); //just the value of the object as an array
+
+
+</script>
+
+</body>
+</html>
